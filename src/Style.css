@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #363636;
+  color: #def2f1;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navbar styling */
+nav {
+  display: flex;
+  width: 100vw;
+  height: 7vh;
+  position: fixed;
+  background-color: black;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 2;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+nav a:hover {
+  color: white;
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+  transition: width 0.5s;
+}
+
+/* Main container with button and stats */
+
+.mainContainer {
+  position: absolute;
+  top: 7vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 93vh;
+}
+
+.imgandstats {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+}
+
+.buttonClicker {
+  width: 50%;
+  height: 80%;
+  cursor: pointer;
+}
+
+.buttonClicker img {
+  width: 300px;
+  height: 400px;
+}
+
+.stats p {
+  font-size: 17px;
+  margin: 10px;
+}
+
+/* Achievements styling */
+
+.achivements {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 80vh;
+  width: 90vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.oneAchievemnt {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  color: white;
+  border: 1px solid #ffffff;
+  margin: 10px 10px;
+  width: 40vw;
+  padding: 10px;
+  height: 30vh;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all 0.5s ease-out;
+  opacity: 0.5;
+}
+.oneAchievemnt::after {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-top: 0px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-left: 0px solid #ffffff;
+  top: 100%;
+  left: 50%;
+  margin-left: -25px;
+  content: "";
+  transform: rotate(45deg);
+  margin-top: -25px;
+  background: #363636;
+}
+
+.active {
+  opacity: 1;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 2px 10px;
+  color: #def2f1;
+  border: 2px solid #def2f1;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 1.5s;
+  display: none;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.activeButton {
+  display: block;
+}
+
+/*  Shop styling  */
+
+.shopContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 80vh;
+  width: 95vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.onePurchase {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  color: white;
+  border: 1px solid #ffffff;
+  margin: 10px 10px;
+  width: 40vw;
+  padding: 10px;
+  height: 30vh;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: all 0.5s ease-out;
+}
+.onePurchase::after {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-top: 0px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  border-left: 0px solid #ffffff;
+  top: 100%;
+  left: 50%;
+  margin-left: -25px;
+  content: "";
+  transform: rotate(45deg);
+  margin-top: -25px;
+  background: #363636;
+}
+
+.cleaner {
+  background-color: transparent;
+  padding: 2px 10px;
+  color: #def2f1;
+  border: 2px solid #def2f1;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 1.5s;
+}
+
+.cleaner:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  nav a {
+    font-size: 11px;
+  }
+  .imgandstats {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+
+  .buttonClicker {
+    width: 100%;
+    height: 80%;
+    cursor: pointer;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .buttonClicker img {
+    width: 200px;
+    height: 300px;
+  }
+  .mainContainer h1 {
+    font-size: 23px;
+  }
+  .mainContainer h3 {
+    font-size: 15px;
+  }
+  .stats p {
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .oneAchievemnt {
+    width: 97%;
+    height: 30vh;
+    margin: 30px 10px;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+  .onePurchase {
+    width: 97%;
+    height: 30vh;
+    margin: 30px 10px;
+    font-size: 14px;
+    justify-content: space-evenly;
+  }
+}
